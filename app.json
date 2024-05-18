@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "projectOne",
-    "slug": "projectOne",
+    "name": "leMillion",
+    "slug": "leMillion",
+
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "leMillion",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
