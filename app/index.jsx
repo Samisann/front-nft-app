@@ -1,5 +1,5 @@
 import { Text, View, } from "react-native";
-import HomeScreen from "./(tabs)/home";
+import Home from "./(tabs)/home";
 import { Link } from "expo-router";
 
 
@@ -13,7 +13,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <HomeScreen />
+      <Home />
   
     </View>
   );
