@@ -6,7 +6,7 @@ import { useEffect } from "react";
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [fontsLoaded, error ] = useFonts(
+  const [fontsLoaded, error] = useFonts(
     {
       "Poppins-Black": require("../assets/fonts/Poppins-Black.ttf"),
       "Poppins-Bold": require("../assets/fonts/Poppins-Bold.ttf"),
@@ -17,21 +17,23 @@ export default function RootLayout() {
       "Poppins-Regular": require("../assets/fonts/Poppins-Regular.ttf"),
       "Poppins-SemiBold": require("../assets/fonts/Poppins-SemiBold.ttf"),
       "Poppins-Thin": require("../assets/fonts/Poppins-Thin.ttf"),
-      
+
     }
   );
-  
+
   useEffect(() => {
     if (error) throw error;
     if (fontsLoaded) SplashScreen.hideAsync();
-  },[fontsLoaded, error]
+  }, [fontsLoaded, error]
   );
 
-  if(!fontsLoaded && !error) return null;
+  if (!fontsLoaded && !error) return null;
   return (
     <Stack>
-      <Stack.Screen name="index" options={{ title: "Home Screen" }}  />
-      
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="search/[query]" options={{ headerShown: false }} />
     </Stack>
   );
 }
