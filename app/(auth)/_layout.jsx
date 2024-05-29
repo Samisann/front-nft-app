@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import SignUp from './signUp';
+import Login from './login';
 
 const AuthLayout = () => {
   return (
-    <View>
-      <Text>AuthLayout</Text>
-    </View>
+    <>
+      <SignUp />
+      {/* <Login/>  */}
+    </>
   )
 }
 
-export default AuthLayout
+export default AuthLayout;
 
-const styles = StyleSheet.create({})

@@ -1,18 +1,16 @@
+import React from 'react';
+import { SafeAreaView, View, Text, Image, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Link } from 'expo-router';
-import { Image, View,Text,  } from 'react-native';
+import Welcome from '../(auth)/welcome';
+import { SearchBar } from '../(dashboard)/searchBar';
 
 
-export default function Home() {
-  return (
-   <View className="flex-1 items-center justify-center ">
- 
-     
-      
-        
-        <Text className="text-3xl font-pblack">Welcome to Expo Tailwind CSS</Text>
-        <Link href={"/profile"} className="text-3xl">profile</Link>
+export function Home() {
 
-      </View>
-    
-  
-  )};
+    return (
+       <>
+        <Welcome />
+        </>
+    );
+}
