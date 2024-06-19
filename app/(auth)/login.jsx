@@ -13,7 +13,7 @@ export default function Login() {
 
     const handleLogin = () => {
         console.log(email, password);
-
+    
         const emailRegex = /\S+@\S+\.\S+/;
         if (!emailRegex.test(email)) {
             Alert.alert("Invalid Email", "Please enter a valid email address");
@@ -23,8 +23,21 @@ export default function Login() {
             Alert.alert("Weak Password", "Password must be at least 8 characters long");
             return;
         }
-        axios.get("http://localhost:8000/api/auth/login")
+    
+        axios.post("http://localhost:8000/api/auth/login", {
+            email: email,
+            password: password
+        })
+        .then(response => {
+            console.log("Login successful:", response);
+        })
+        .catch(error => {
+            console.error("Login failed:", error);
+            Alert.alert("Login Failed", "The email or password is incorrect");
+        });
     }
+
+   
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#240750' }}>

@@ -6,18 +6,17 @@ import { Link } from 'expo-router'
 import MapView from 'react-native-maps'
 
 const Game = () => {
-    // return a map in this view but dont add the title of the view
     return (
         <SafeAreaView style={styles.container}>
     
-        <MapView style={styles.map} 
+       {/*  <MapView style={styles.map} 
         initialRegion={{
           latitude: 37.78825,
           longitude: -122.4324,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
-        />
+        /> */}
         
         </SafeAreaView>
     )

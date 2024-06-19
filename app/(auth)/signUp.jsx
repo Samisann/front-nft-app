@@ -18,7 +18,23 @@ export default function SignUp() {
             Alert.alert("Weak Password", "Password must be at least 8 characters long");
             return;
         }
-        axios.post("http://localhost:8000/api/auth/register", { username: setUsername, email: setEmail, password: setPassword, roles: ["chasseur"] })
+
+        axios.post("http://localhost:8000/api/auth/register", {
+            username: username,
+            email: email,
+            password: password,
+            roles: ["chasseur"] 
+            // Assuming your backend expects 'roles' to be included
+        })
+        .then(response => {
+            console.log("Registration successful:", response);
+            Alert.alert("Registration Successful", "You are now registered and can log in.");
+            // Here you might want to navigate to the login page or main app screen
+        })
+        .catch(error => {
+            console.error("Registration failed:", error);
+            Alert.alert("Registration Failed", "Please check your details and try again.");
+        });
     }
 
     return (
