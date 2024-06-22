@@ -1,14 +1,16 @@
 import { Text, View, } from "react-native";
-import Home from "./(tabs)/home";
-import { Link } from "expo-router";
+import TabLayout from "@/app/(tabs)/_layout";
 
 
 export default function Index() {
   return (
     <View
- 
+      style={{
+        flex: 1,
+
+      }}
     >
-      <Home />
+      <TabLayout />
       
     </View>
   );
