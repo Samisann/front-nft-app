@@ -2,7 +2,7 @@
 # Front-NFT-App
 
 This is the frontend application for the NFT Marketplace, developed using React Native and Expo. It features user management, an NFT marketplace, and interactive gaming functionalities. This frontend is designed to interact seamlessly with the backend service to fetch and display NFT collections, allowing users to engage directly from their mobile devices in a dynamic digital asset environment.
-
+Team members: Sami, Melina, Maha
 ## Table of Contents
 
 - [Features](#features)
